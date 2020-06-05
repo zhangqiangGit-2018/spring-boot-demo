@@ -22,9 +22,16 @@ import java.util.Date;
  */
 @EqualsAndHashCode(callSuper = true)  //重写Equals和hashCode方法同时  callSuper
 //可以实现父类中继承的字段可以参与比较
-@NoArgsConstructor
+@NoArgsConstructor   //无参构造方法
+/**
+ * 会生成一个包含所有变量，全部参数都会自动生成，同时如果变量使用NotNull 会进行
+ * 为空的检验，该注解的作用域只有在实体类上
+ */
 @AllArgsConstructor
-@Data
+//顺便介绍下还有一个注解可以指定参数
+//@RequiredArgsConstructor  会生成一个包含常量 final修饰的属性，还有表示
+//@NotNull 的变量的构造方法
+@Data // 注在类上，提供类的get、set、equals、hashCode、canEqual、toString方法
 @Builder
 @Entity
 @Table(name = "orm_user")
