@@ -20,7 +20,8 @@ import java.util.Date;
  * @version: V1.0
  * @modified: 76peter
  */
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode(callSuper = true)  //重写Equals和hashCode方法同时  callSuper
+//可以实现父类中继承的字段可以参与比较
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
